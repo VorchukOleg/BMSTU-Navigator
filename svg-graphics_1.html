@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div class="FirstFloorPlan">
+	<img src="FirstFloorPlan.png" alt="" style="position: absolute;" />
+	<svg>
+		<polygon data-id="1" points="54,40 135,40 135,90 45,90"></polygon>
+		<polygon data-id="2" points="135,45 165,45 165,77 135,77"></polygon>
+		<polygon data-id="3" points="165,40 197,40 203,77 165,77"></polygon>
+		<polygon data-id="4" points="197,40 235,40 222,112 208,112"></polygon>
+		<polygon data-id="5" points=""></polygon>
+		<polygon data-id="6" points=""></polygon>
+		<polygon data-id="7" points=""></polygon>
+		<polygon data-id="8" points=""></polygon>
+		<polygon data-id="9" points=""></polygon>
+		<polygon data-id="10" points=""></polygon>
+		<polygon data-id="11" points=""></polygon>
+		<polygon data-id="12" points=""></polygon>
+		<polygon data-id="13" points=""></polygon>
+		<polygon data-id="14" points=""></polygon>
+		<polygon data-id="15" points=""></polygon>
+		<polygon data-id="16" points=""></polygon>
+		<polygon data-id="17" points=""></polygon>
+		<polygon data-id="18" points=""></polygon>
+		<polygon data-id="19" points=""></polygon>
+		<polygon data-id="20" points=""></polygon>
+		<polygon data-id="21" points=""></polygon>
+		<polygon data-id="22" points=""></polygon>
+		<polygon data-id="23" points=""></polygon>
+		<polygon data-id="24" points=""></polygon>
+		<polygon data-id="25" points=""></polygon>
+		<polygon data-id="26" points=""></polygon>
+		<polygon data-id="27" points=""></polygon>
+		<polygon data-id="28" points=""></polygon>
+		<polygon data-id="29" points=""></polygon>
+		<polygon data-id="30" points=""></polygon>
+		<polygon data-id="31" points=""></polygon>
+	</svg>
+
+	<div class="FirstFloorPlan-item" data-id="2" style="top: 60px; left: 150px;">
+		<div class="FirstFloorPlan-name">104</div>
+		<div class="FirstFloorPlan-popup">
+			Сеть магазинов «Детский мир» - крупнейший розничный оператор торговли
+			детскими товарами и лидер рынка.
+		</div>
+	</div>
+
+	<div class="FirstFloorPlan-item" data-id="3" style="top: 60px; left: 170px;">
+		<div class="FirstFloorPlan-name">106</div>
+		<div class="FirstFloorPlan-popup">
+			Спортивный бренд Arena (Арена) известен во всем мире как
+			производитель товаров для плавания.
+		</div>
+	</div>
+
+</div>
+<style type="text/css">
+/* Полигоны магазинов */
+.FirstFloorPlan {
+	height: 413px;
+	width: 1000px;
+	margin: 0 auto;
+	position: fixed;
+}
+.FirstFloorPlan svg {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 413px;
+	width: 1000px;
+}
+.FirstFloorPlan polygon {
+	fill: #FFDBA4;
+	cursor: pointer;
+}
+
+/* Цвета магазинов - при наведении мышкой и активный */
+.FirstFloorPlan polygon:hover, #hover {
+	fill: #ffc70b;
+}
+.FirstFloorPlan polygon.active {
+	fill: #FF8C0B !important;
+}
+
+/* Названия и подсказки магазинов */
+.FirstFloorPlan-item {
+	position: absolute;
+	cursor: pointer;
+}
+.FirstFloorPlan-name {
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+	line-height: 13px;
+}
+.FirstFloorPlan-popup {
+	display: none;
+	border: 1px solid #777;
+	padding: 10px;
+	width: 300px;
+	position: absolute;
+	font-size: 12px;
+	line-height: 14px;
+	background: #fff;
+	z-index: 9999;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	text-align: left;
+}
+</style>
+
+<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+// Изменение цвета polygon когда мышка над названием магазина.
+$('.FirstFloorPlan-item').hover(
+	function(){
+		$('.FirstFloorPlan polygon[data-id=' + $(this).data('id') + ']').attr('id', 'hover');
+	},
+	function(){
+		$('.FirstFloorPlan polygon[data-id=' + $(this).data('id') + ']').attr('id', '');
+	}
+);
+
+// Клик по названию магазина - открывается подсказка.
+$('.FirstFloorPlan-item').on('click', function(){
+	$('.FirstFloorPlan-popup').hide();
+	$('.FirstFloorPlan polygon').attr('class', '');
+
+	var popup = $(this).find('.FirstFloorPlan-popup');
+	$(popup).css('top', '-' + ($(popup).outerHeight(true) + 15) + 'px');
+	$(popup).css('left', '-' + (($(popup).outerWidth(true) / 2) - ($(this).outerWidth(true) / 2)) + 'px');
+	$('.FirstFloorPlan polygon[data-id=' + $(this).data('id') + ']').attr('class', 'active');
+	$(popup).show();
+});
+
+// Клик по полигону магазина - также открывается подсказка.
+$('.FirstFloorPlan polygon').click(function(){
+	$('.FirstFloorPlan-popup').hide();
+	$('.FirstFloorPlan-item[data-id=' + $(this).data('id') + ']').trigger('click');
+});
+
+// Клик вне магазинов все закрывает.
+$("body").click(function(e) {
+	if ($(e.target).closest(".FirstFloorPlan polygon, .FirstFloorPlan-item").length == 0) {
+		$(".FirstFloorPlan-popup").hide();
+		$('.FirstFloorPlan polygon').attr('class', '');
+	}
+});
+</script>
