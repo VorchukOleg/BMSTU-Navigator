@@ -1,56 +1,83 @@
 import networkx as nx
 import matplotlib.pyplot as plt
+class Graph:
+    def __init__(self):
+        self.graph = nx.Graph()
 
+    def add_mainpoint(self, codename, coordinates):
+        self.graph.add_node(codename, type='mainpoint', coordinates=coordinates)
 
-class Vertex:
-    def __init__(self, id, weight):
-        self.id = id
-        self.weight = weight
+    def add_vertexpoint(self, codename, coordinates):
+        self.graph.add_node(codename, type='vertexpoint', coordinates=coordinates)
 
+    def add_edge(self, source, target, weight):
+        self.graph.add_edge(source, target, weight=weight)
 
-class MainPoint:
-    def __init__(self, id, vertices):
-        self.id = id
-        self.vertices = vertices
+    def find_shortest_path(self, start, end):
+        shortest_path = nx.shortest_path(self.graph, source=start, target=end, weight='weight')
+        shortest_length = nx.shortest_path_length(self.graph, source=start, target=end, weight='weight')
+        return shortest_path, shortest_length
 
+    def visualize_graph(self):
+        pos = nx.get_node_attributes(self.graph, 'coordinates')
+        node_type = nx.get_node_attributes(self.graph, 'type')
 
-# Функция для поиска минимального расстояния и точек пути
-def find_shortest_path(graph, start, end):
-    shortest_path = nx.dijkstra_path(graph, start, end)
-    shortest_distance = nx.dijkstra_path_length(graph, start, end)
-    return shortest_distance, shortest_path
+        mainpoint_nodes = [node for node, ntype in node_type.items() if ntype == 'mainpoint']
+        vertexpoint_nodes = [node for node, ntype in node_type.items() if ntype == 'vertexpoint']
 
+        nx.draw_networkx_nodes(self.graph, pos, nodelist=mainpoint_nodes, node_color='blue', node_size=500, alpha=0.8)
+        nx.draw_networkx_nodes(self.graph, pos, nodelist=vertexpoint_nodes, node_color='red', node_size=300, alpha=0.8)
+        nx.draw_networkx_labels(self.graph, pos, font_color='white')
 
-# Создаем список главных точек (main)
-main = []
-main.append(MainPoint(1, [Vertex(2, 3), Vertex(13, 3), Vertex(3, 4), Vertex(3, 2), Vertex(9, 3), Vertex(10, 3)]))
-main.append(MainPoint(2, [Vertex(4, 5), Vertex(5, 1), Vertex(12, 5)]))
-main.append(MainPoint(3, [Vertex(6, 3), Vertex(7, 2), Vertex(8, 4), Vertex(14, 2)]))
+        nx.draw_networkx_edges(self.graph, pos, width=1.0, alpha=0.5)
+        edge_labels = nx.get_edge_attributes(self.graph, 'weight')
+        nx.draw_networkx_edge_labels(self.graph, pos, edge_labels=edge_labels)
 
-# Создаем граф
-G = nx.Graph()
+        plt.axis('off')
+        plt.show()
 
-# Добавляем вершины и ребра в граф
-for main_point in main:
-    G.add_node(main_point.id)
-    for vertex in main_point.vertices:
-        G.add_node(vertex.id)
-        G.add_edge(main_point.id, vertex.id, weight=vertex.weight)
+graph = Graph()
 
-# Отрисовываем граф
-pos = nx.spring_layout(G)
-nx.draw(G, pos, with_labels=True)
+#################################################################### Связи Коридоров
+graph.add_edge('коридор1', 'коридор2', 3)
+graph.add_edge('коридор2', 'коридор3', 3)
 
-# Добавляем веса ребер
-labels = nx.get_edge_attributes(G, 'weight')
-nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+#################################################################### Коридор 1
+graph.add_mainpoint('коридор1', (59.1, 96.6))
+graph.add_vertexpoint('104', (50.1, 109.5))
+graph.add_vertexpoint('106', (60.4, 110.4))
+graph.add_vertexpoint('101', (51.2, 84.3))
+graph.add_vertexpoint('WC1', (68.8, 101.7))
+graph.add_edge('коридор1', '104', 5)
+graph.add_edge('коридор1', '106', 5)
+graph.add_edge('коридор1', '101', 5)
+graph.add_edge('коридор1', 'WC1', 5)
 
-# Пример поиска расстояния и пути между вершинами 1 и 8
-print("Введите id двух точек: ")
-start_vertex, end_vertex = map (int, input ().split ())
-shortest_distance, shortest_path = find_shortest_path(G, start_vertex, end_vertex)
-print("Минимальное расстояние:", shortest_distance)
-print("Путь:", shortest_path)
+#################################################################### Коридор 2
+graph.add_mainpoint('коридор2', (82.4, 91.5))
+graph.add_vertexpoint('лестница1', (75.6, 101.7))
+graph.add_vertexpoint('лестница2', (91.2, 102.8))
+graph.add_vertexpoint('лестница3', (78.7, 78.8))
+graph.add_edge('коридор2', 'лестница1', 5)
+graph.add_edge('коридор2', 'лестница2', 5)
+graph.add_edge('коридор2', 'лестница3', 5)
 
-# Отображаем граф на экране
-plt.show()
+#################################################################### Коридор 3
+graph.add_mainpoint('коридор3', (116.9, 96.8))
+graph.add_vertexpoint('WC2', (97.4, 101.0))
+graph.add_vertexpoint('028A', (107.9, 112.2))
+graph.add_vertexpoint('034A', (122.8, 112.2))
+graph.add_vertexpoint('062A', (135.8, 111.3))
+graph.add_edge('коридор3', 'WC2', 5)
+graph.add_edge('коридор3', '028A', 5)
+graph.add_edge('коридор3', '034A', 5)
+graph.add_edge('коридор3', '062A', 5)
+
+print("Введите пункты отрпавки и назначения: ")
+start, end = map (str, input ().split ())
+shortest_path, shortest_length = graph.find_shortest_path(start, end)
+
+print(f"Shortest path: {shortest_path}")
+print(f"Shortest length: {shortest_length}")
+
+graph.visualize_graph()
