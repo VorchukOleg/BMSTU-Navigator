@@ -1,0 +1,33 @@
+.first_floor_ulk {
+	height: 360px;
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.first_floor_ulk svg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 360px;
+	width: 900px;
+}
+
+.first_floor_ulk polygon {
+	fill: #ADD8E6;
+	stroke: #4682B4;
+	cursor: pointer;
+}
+
+.first_floor_ulk background {
+	width: 900px;
+	height: 360px;
+}
+
+.isSelectedAud {
+    fill: rgb(141, 31, 99) !important;
+}
+
+.isSelectedHall {
+    fill: rgb(0, 55, 255) !important;
+}
