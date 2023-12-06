@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f65605eb-9097-47dc-a02e-3792a34047f7" name="Changes" comment="Commit 2 - Fix" />
+    <list default="true" id="f65605eb-9097-47dc-a02e-3792a34047f7" name="Changes" comment="Commit - Upgrade for SB solve">
+      <change afterPath="$PROJECT_DIR$/front/1_floor_ulk_900х360.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/database.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,9 +61,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "timurExample",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/joulejoestar/PycharmProjects/BMSTU-Navigator"
+    "last_opened_file_path": "C:/Users/joulejoestar/PycharmProjects/BMSTU-Navigator/front"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joulejoestar\PycharmProjects\BMSTU-Navigator" />
+      <recent name="C:\Users\joulejoestar\PycharmProjects\BMSTU-Navigator\front" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.sgUp">
     <configuration name="01.11.23" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BMSTU-Navigator" />
@@ -149,11 +163,20 @@
       <option name="project" value="LOCAL" />
       <updated>1699813571723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit - Upgrade for SB solve">
+      <option name="closed" value="true" />
+      <created>1700429045860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700429045860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit 2 - Fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 2 - Fix" />
+    <MESSAGE value="Commit - Upgrade for SB solve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit - Upgrade for SB solve" />
   </component>
 </project>

@@ -1,0 +1,16 @@
+.store {
+  fill: beige;
+  stroke: black;
+}
+
+.store:hover {
+  fill: orange;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  display: none;
+}
