@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+select {
+    height: 30px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#graph-image {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#route-info {
+    margin-top: 30px;
+}
+
+#route-list {
+    margin-bottom: 20px;
+}
+
+#route-length {
+    font-size: 18px;
+    font-weight: bold;
+}
