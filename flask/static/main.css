@@ -1,46 +1,94 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1 {
-    margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-form {
-    margin-bottom: 30px;
+label {
+  font-weight: bold;
+  color: #333;
 }
 
-select {
-    height: 30px;
-    font-size: 16px;
-    margin-right: 10px;
+/* Окна выбора vertexpoints */
+.select-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-#graph-image {
-    width: 400px;
-    height: auto;
-    margin-bottom: 20px;
+.select-container select {
+  height: 40px;
+  font-size: 16px;
+  padding: 5px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  flex: 1;
 }
 
+/* Изображение графа */
+.graph-image {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Кнопка отправки запроса */
 #submit-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #1e90ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1e90ff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-#route-info {
-    margin-top: 30px;
+#submit-btn:hover {
+  background-color: #0066cc;
 }
 
-#route-list {
-    margin-bottom: 20px;
+/* Результат маршрута */
+.route-info {
+  margin-top: 30px;
 }
 
-#route-length {
-    font-size: 18px;
-    font-weight: bold;
+.route-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.route-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.route-info ul li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.route-length {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
 }
