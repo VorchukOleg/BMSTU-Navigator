@@ -25,9 +25,9 @@
 }
 
 .isSelectedAud {
-    fill: rgb(141, 31, 99) !important;
+	fill: rgb(21, 60, 117) !important;
 }
 
 .isSelectedHall {
-    fill: rgb(0, 55, 255) !important;
+	fill: rgb(70, 130, 180) !important;
 }
