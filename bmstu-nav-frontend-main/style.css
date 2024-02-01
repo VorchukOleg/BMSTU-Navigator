@@ -19,6 +19,10 @@
 	cursor: pointer;
 }
 
+.first_floor_ulk pngImage {
+	fill: #ADD8E6;
+}
+
 .first_floor_ulk background {
 	width: 900px;
 	height: 360px;
