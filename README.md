@@ -33,11 +33,16 @@ admin@pgadmin.com
 password
 ```
 9. Создаём сервер
+
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/cb876462-1c92-4099-ac41-152ba2d5c9d0)
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/2ed24a7b-ee34-4d5a-a6fe-8b8ef3f67676)
+
 10. Создаём БД 
+
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/245bc8fc-2b7d-455f-ad6d-12b305c7b02e)
+
 11. Восстанавливаем базу данных из backup файла
+
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/a839c835-c747-470e-b8b0-b5108a517b30)
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/ea510283-a0cc-4c05-b4ae-0783cfb6271d)
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/cf8b4ee5-eb82-4385-8b82-bbeacaf75ad7)
