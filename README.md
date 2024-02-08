@@ -50,6 +50,10 @@ password
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/c4bcc636-5a3d-4a6e-91ef-f48153fe82c5)
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/f8ec031a-fb56-4768-80c6-5107ed5bc989)
 
+12. Радуемся тому, что всё работает 
+![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/31835ffd-4b62-43d8-9b06-c90db9b082ef)
+
+
 
 
 
