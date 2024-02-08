@@ -27,6 +27,7 @@ PGADMIN_LISTEN_PORT_ENV=80
 В результате должно получиться 3 сервиса-контейнера 
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/f7b67d0e-8859-46d1-831f-de182de0f305)
 8. Переходим по ссылке http://localhost:15432/browser/
+
 Данные для входа 
 ```
 admin@pgadmin.com
