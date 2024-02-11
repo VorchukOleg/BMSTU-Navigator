@@ -19,7 +19,7 @@ const data = {
             picture: null
         },
         {
-           id: 2,
+           id: 3,
             uuid: "0000-0000-0000-0000-0000",
             title: "Л202",
             isSelected: false,
@@ -28,7 +28,7 @@ const data = {
             picture: null
         },
         {
-           id: 2,
+           id: 4,
             uuid: "0000-0000-0000-0000-0000",
             title: "Л203",
             isSelected: false,
@@ -37,7 +37,7 @@ const data = {
             picture: null
         },
         {
-           id: 2,
+           id: 5,
             uuid: "0000-0000-0000-0000-0000",
             title: "Л203А",
             isSelected: false,
@@ -46,7 +46,7 @@ const data = {
             picture: null
         },
         {
-           id: 2,
+           id: 6,
             uuid: "0000-0000-0000-0000-0000",
             title: "Лифт",
             isSelected: false,
@@ -55,21 +55,165 @@ const data = {
             picture: "elevator.svg"
         },
         {
-           id: 2,
+           id: 7,
             uuid: "0000-0000-0000-0000-0000",
             title: "Л204",
             isSelected: false,
             type: "aud",
             coordinates: [[214, 255], [343, 255], [343, 335], [214, 335]],
+            picture: null
+        },
+        {
+           id: 8,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л205",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[343, 255], [390, 255], [390, 335], [343, 335]],
+            picture: null
+        },
+        {
+           id: 9,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "208",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[390, 247], [418, 247], [418, 284], [390, 284]],
+            picture: null
+        },
+        {
+           id: 10,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "207",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[418, 247], [450, 247], [450, 284], [418, 284]],
+            picture: null
+        },
+        {
+           id: 11,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "202",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[390, 284], [473, 284], [473, 335], [390, 335]],
+            picture: "stair.svg"
+        },
+        {
+           id: 12,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "204",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[473, 262], [502, 262], [502, 296], [522, 296], [522, 335], [473, 335]],
+            picture: "man.svg"
+        },
+        {
+           id: 13,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "205",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[522, 296], [561, 296], [561, 335], [522, 335]],
+            picture: null
+        },
+        {
+           id: 14,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "206",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[502, 262], [540, 262], [540, 296], [502, 296]],
+            picture: "woman.svg"
+        },
+        {
+           id: 15,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л206",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[561, 247], [642, 247], [642, 335], [561, 335]],
+            picture: null
+        },
+        {
+           id: 16,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л207",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[642, 247], [727, 247], [727, 335], [642, 335]],
+            picture: null
+        },
+        {
+           id: 17,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Лифт",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[727, 335], [810, 335], [810, 383], [727, 383]],
             picture: "elevator.svg"
         },
         {
-           id: 2,
+           id: 18,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "203",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[810, 335], [912, 335], [912, 383], [810, 383]],
+            picture: "stair.svg"
+        },
+        {
+           id: 19,
             uuid: "0000-0000-0000-0000-0000",
             title: "209",
             isSelected: false,
             type: "hall",
             coordinates: [[214, 210], [275, 210], [275, 255], [214, 255]],
+            picture: null
+        },
+        {
+           id: 20,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[275, 210], [390, 210], [390, 255], [275, 255]],
+            picture: null
+        },
+        {
+           id: 21,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[390, 210], [473, 210], [473, 284], [450, 284], [450, 247], [390, 247]],
+            picture: null
+        },
+        {
+           id: 22,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[473, 210], [561, 210], [561, 296], [540, 296], [540, 262], [473, 262]],
+            picture: null
+        },
+        {
+           id: 23,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[561, 210], [727, 210], [727, 247], [561, 247]],
+            picture: null
+        },
+        {
+           id: 24,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[727, 210], [766, 210], [766, 83], [912, 83], [912, 335], [727, 335]],
             picture: null
         },
     ]
