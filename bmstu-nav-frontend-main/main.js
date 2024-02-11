@@ -1,12 +1,89 @@
 const data = {
     objects: [
         {
+           id: 1,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л201А",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[214, 83], [251, 83], [251, 133], [214, 133]],
+            picture: null
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л201",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[251, 83], [393, 83], [393, 210], [265, 210], [265, 133], [251, 133]],
+            picture: null
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л202",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[393, 83], [555, 83], [555, 210], [393, 210]],
+            picture: null
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л203",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[555, 83], [725, 83], [725, 210], [555, 210]],
+            picture: null
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л203А",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[725, 83], [766, 83], [766, 210], [725, 210]],
+            picture: null
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Лифт",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[214, 133], [265, 133], [265, 210], [214, 210]],
+            picture: "elevator.svg"
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Л204",
+            isSelected: false,
+            type: "aud",
+            coordinates: [[214, 255], [343, 255], [343, 335], [214, 335]],
+            picture: "elevator.svg"
+        },
+        {
+           id: 2,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "209",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[214, 210], [275, 210], [275, 255], [214, 255]],
+            picture: null
+        },
+    ]
+}
+
+const data__ = {
+    objects: [
+        {
             id: 1,
             uuid: "0000-0000-0000-0000-0000",
             title: "110",
             isSelected: false,
             type: "aud",
-            coordinates: [[34, 75], [80, 75], [80, 121], [34, 121]],
+            coordinates: [[214, 83], [265, 83], [265, 133], [214, 133]],
             picture: null
 
         },
@@ -16,7 +93,7 @@ const data = {
             title: "Лифт 1",
             isSelected: false,
             type: "aud",
-            coordinates: [[34, 121], [80, 121], [80, 171], [34, 171]],
+            coordinates: [[214, 133], [265, 133], [265, 192], [214, 192]],
             picture: "elevator.svg"
 
         },
@@ -26,7 +103,7 @@ const data = {
             title: "112",
             isSelected: false,
             type: "aud",
-            coordinates: [[80, 75], [196, 75], [196, 171], [80, 171]],
+            coordinates: [[265, 83], [390, 83], [390, 192], [265, 192]],
             picture: null
 
         },
@@ -36,7 +113,7 @@ const data = {
             title: "112а",
             isSelected: false,
             type: "aud",
-            coordinates: [[111, 171], [196, 171], [196, 221], [111, 221]],
+            coordinates: [[298, 192], [390, 192], [390, 245], [298, 245]],
             picture: null
 
         },
@@ -46,7 +123,7 @@ const data = {
             title: "C106",
             isSelected: false,
             type: "aud",
-            coordinates: [[196, 75], [297, 75], [297, 221], [196, 221]],
+            coordinates: [[390, 83], [504, 83], [504, 245], [390, 245]],
             picture: null
 
         },
@@ -56,7 +133,7 @@ const data = {
             title: "C101",
             isSelected: false,
             type: "aud",
-            coordinates: [[297, 75], [392, 75], [392, 221], [297, 221]],
+            coordinates: [[504, 83], [609, 83], [609, 245], [504, 245]],
             picture: null
 
         },
@@ -66,7 +143,7 @@ const data = {
             title: "C107",
             isSelected: false,
             type: "aud",
-            coordinates: [[392, 75], [467, 75], [467, 190], [392, 190]],
+            coordinates: [[609, 83], [697, 83], [697, 210], [609, 210]],
             picture: null
 
         },
@@ -76,7 +153,7 @@ const data = {
             title: "C108",
             isSelected: false,
             type: "aud",
-            coordinates: [[467, 75], [536, 75], [536, 193], [498, 193], [498, 185], [467, 185]],
+            coordinates: [[697, 83], [768, 83], [768, 210], [697, 210]],
             picture: null
 
         },
@@ -86,7 +163,7 @@ const data = {
             title: "109",
             isSelected: false,
             type: "aud",
-            coordinates: [[34, 171], [111, 171], [111, 221], [34, 221]],
+            coordinates: [[214, 192], [298, 192], [298, 245], [214, 245]],
             picture: null
 
         },
@@ -96,7 +173,7 @@ const data = {
             title: "С103",
             isSelected: false,
             type: "aud",
-            coordinates: [[34, 254], [68, 254], [68, 300], [34, 300]],
+            coordinates: [[214, 282], [250, 282], [250, 335], [214, 335]],
             picture: null
 
         },
@@ -106,7 +183,7 @@ const data = {
             title: "С105",
             isSelected: false,
             type: "aud",
-            coordinates: [[68, 254], [98, 254], [98, 300], [68, 300]],
+            coordinates: [[250, 282], [284, 282], [284, 335], [250, 335]],
             picture: null
 
         },
@@ -116,7 +193,7 @@ const data = {
             title: "С104",
             isSelected: false,
             type: "aud",
-            coordinates: [[98, 254], [197, 254], [197, 300], [98, 300]],
+            coordinates: [[284, 282], [392, 282], [392, 335], [284, 335]],
             picture: null
 
         },
@@ -126,7 +203,7 @@ const data = {
             title: "104",
             isSelected: false,
             type: "aud",
-            coordinates: [[197, 254], [300, 254], [300, 300], [197, 300]],
+            coordinates: [[392, 282], [508, 282], [508, 335], [392, 335]],
             picture: "stair.svg"
 
         },
@@ -136,7 +213,7 @@ const data = {
             title: "111",
             isSelected: false,
             type: "aud",
-            coordinates: [[300, 254], [355, 254], [355, 300], [300, 300]],
+            coordinates: [[508, 282], [568, 282], [568, 335], [508, 335]],
             picture: null
 
         },
@@ -146,7 +223,7 @@ const data = {
             title: "С102",
             isSelected: false,
             type: "aud",
-            coordinates: [[355, 254], [421, 254], [421, 300], [355, 300]],
+            coordinates: [[568, 282], [640, 282], [640, 335], [568, 335]],
             picture: null
 
         },
@@ -156,48 +233,48 @@ const data = {
             title: "Туалет",
             isSelected: false,
             type: "aud",
-            coordinates: [[421, 233], [467, 233], [467, 263], [421, 263]],
+            coordinates: [[640, 257], [667, 257], [667, 293], [640, 293]],
             picture: "man.svg"
 
         },
         {
             id: 17,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лестница",
+            title: "Туалет",
             isSelected: false,
             type: "aud",
-            coordinates: [[421, 263], [498, 263], [498, 300], [421, 300]],
-            picture: "stair.svg"
+            coordinates: [[667, 257], [697, 257], [697, 293], [667, 293]],
+            picture: "man.svg"
 
         },
         {
             id: 18,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лифты 2, 3",
+            title: "Лестница",
             isSelected: false,
             type: "aud",
-            coordinates: [[498, 300], [574, 300], [574, 350], [498, 350]],
-            picture: "elevator.svg"
+            coordinates: [[640, 293], [726, 293], [726, 335], [640, 335]],
+            picture: "stair.svg"
 
         },
         {
             id: 19,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лестница",
+            title: "Лифты 2, 3",
             isSelected: false,
             type: "aud",
-            coordinates: [[574, 293], [668, 293], [668, 350], [574, 350]],
-            picture: "stair.svg"
+            coordinates: [[726, 335], [810, 335], [810, 383], [726, 383]],
+            picture: "elevator.svg"
 
         },
         {
             id: 20,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Лестница",
             isSelected: false,
-            type: "hall",
-            coordinates: [[536, 145], [668, 145], [668, 202], [536, 202]],
-            picture: null
+            type: "aud",
+            coordinates: [[810, 335], [912, 335], [912, 383], [810, 383]],
+            picture: "stair.svg"
 
         },
         {
@@ -206,8 +283,7 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[498, 193], [536, 193], [536, 202], [668, 202], [668, 293], [574, 293],
-                [574, 300], [498, 300]],
+            coordinates: [[768, 162], [912, 162], [912, 224], [768, 224]],
             picture: null
 
         },
@@ -217,7 +293,7 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[467, 185], [498, 185], [498, 263], [467, 263]],
+            coordinates: [[810, 224], [912, 224], [912, 335], [810, 335]],
             picture: null
 
         },
@@ -227,7 +303,7 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[392, 190], [467, 190], [467, 233], [421, 233], [421, 221], [392, 221]],
+            coordinates: [[697, 210], [768, 210], [768, 224], [810, 224], [810, 335], [726, 335], [726, 293], [697, 293]],
             picture: null
 
         },
@@ -237,7 +313,7 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[297, 221], [421, 221], [421, 254], [297, 254]],
+            coordinates: [[609, 210], [697, 210], [697, 257], [640, 257], [640, 245], [609, 245]],
             picture: null
 
         },
@@ -247,7 +323,7 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[196, 221], [297, 221], [297, 254], [196, 254]],
+            coordinates: [[508, 245], [640, 245], [640, 282], [508, 282]],
             picture: null
 
         },
@@ -257,7 +333,27 @@ const data = {
             title: "Коридор",
             isSelected: false,
             type: "hall",
-            coordinates: [[34, 221], [196, 221], [196, 254], [34, 254]],
+            coordinates: [[392, 245], [508, 245], [508, 282], [392, 282]],
+            picture: null
+
+        },
+        {
+            id: 27,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[284, 245], [392, 245], [392, 282], [284, 282]],
+            picture: null
+
+        },
+        {
+            id: 28,
+            uuid: "0000-0000-0000-0000-0000",
+            title: "Коридор",
+            isSelected: false,
+            type: "hall",
+            coordinates: [[214, 245], [284, 245], [284, 282], [214, 282]],
             picture: null
 
         },
