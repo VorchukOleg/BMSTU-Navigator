@@ -59,6 +59,17 @@ password
 12. Радуемся тому, что всё работает 
 ![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/31835ffd-4b62-43d8-9b06-c90db9b082ef)
 
+# Развёртывание на локальной машине (не в контейнере) 
+
+1. Открываем файл ``` util.py ``` 
+![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/822de145-3974-4348-a729-f42928227d92)
+2. Комментируем часть кода под цифрой 1 и раскомментируем часть кода по цифрой 2
+![image](https://github.com/VorchukOleg/BMSTU-Navigator/assets/55689955/d6b387b0-4fae-436b-a395-337ceff45eb9)
+3. Запускаем сервер с помощью команды ```python -m flask --app flask_api\app.py run --host=0.0.0.0```
+
+
+
+
 
 
 
