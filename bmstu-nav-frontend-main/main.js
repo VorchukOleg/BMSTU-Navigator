@@ -48,7 +48,7 @@ const data = {
         {
            id: 6,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лифт",
+            title: "Лифт_1",
             isSelected: false,
             type: "hall",
             coordinates: [[214, 133], [265, 133], [265, 210], [214, 210]],
@@ -147,7 +147,7 @@ const data = {
         {
            id: 17,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лифт",
+            title: "Лифт_2",
             isSelected: false,
             type: "hall",
             coordinates: [[727, 335], [810, 335], [810, 383], [727, 383]],
@@ -174,7 +174,7 @@ const data = {
         {
            id: 20,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_1",
             isSelected: false,
             type: "hall",
             coordinates: [[275, 210], [390, 210], [390, 255], [275, 255]],
@@ -183,7 +183,7 @@ const data = {
         {
            id: 21,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_2",
             isSelected: false,
             type: "hall",
             coordinates: [[390, 210], [473, 210], [473, 284], [450, 284], [450, 247], [390, 247]],
@@ -192,7 +192,7 @@ const data = {
         {
            id: 22,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_3",
             isSelected: false,
             type: "hall",
             coordinates: [[473, 210], [561, 210], [561, 296], [540, 296], [540, 262], [473, 262]],
@@ -201,7 +201,7 @@ const data = {
         {
            id: 23,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_4",
             isSelected: false,
             type: "hall",
             coordinates: [[561, 210], [727, 210], [727, 247], [561, 247]],
@@ -210,7 +210,7 @@ const data = {
         {
            id: 24,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_5",
             isSelected: false,
             type: "hall",
             coordinates: [[727, 210], [766, 210], [766, 83], [912, 83], [912, 335], [727, 335]],
@@ -374,7 +374,7 @@ const data__ = {
         {
             id: 16,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Туалет",
+            title: "Туалет_1",
             isSelected: false,
             type: "aud",
             coordinates: [[640, 257], [667, 257], [667, 293], [640, 293]],
@@ -384,7 +384,7 @@ const data__ = {
         {
             id: 17,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Туалет",
+            title: "Туалет_2",
             isSelected: false,
             type: "aud",
             coordinates: [[667, 257], [697, 257], [697, 293], [667, 293]],
@@ -394,7 +394,7 @@ const data__ = {
         {
             id: 18,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лестница",
+            title: "Лестница_1",
             isSelected: false,
             type: "aud",
             coordinates: [[640, 293], [726, 293], [726, 335], [640, 335]],
@@ -414,7 +414,7 @@ const data__ = {
         {
             id: 20,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Лестница",
+            title: "Лестница_2",
             isSelected: false,
             type: "aud",
             coordinates: [[810, 335], [912, 335], [912, 383], [810, 383]],
@@ -424,7 +424,7 @@ const data__ = {
         {
             id: 21,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_1",
             isSelected: false,
             type: "hall",
             coordinates: [[768, 162], [912, 162], [912, 224], [768, 224]],
@@ -434,7 +434,7 @@ const data__ = {
         {
             id: 22,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_2",
             isSelected: false,
             type: "hall",
             coordinates: [[810, 224], [912, 224], [912, 335], [810, 335]],
@@ -444,7 +444,7 @@ const data__ = {
         {
             id: 23,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_3",
             isSelected: false,
             type: "hall",
             coordinates: [[697, 210], [768, 210], [768, 224], [810, 224], [810, 335], [726, 335], [726, 293], [697, 293]],
@@ -454,7 +454,7 @@ const data__ = {
         {
             id: 24,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_4",
             isSelected: false,
             type: "hall",
             coordinates: [[609, 210], [697, 210], [697, 257], [640, 257], [640, 245], [609, 245]],
@@ -464,7 +464,7 @@ const data__ = {
         {
             id: 25,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_5",
             isSelected: false,
             type: "hall",
             coordinates: [[508, 245], [640, 245], [640, 282], [508, 282]],
@@ -474,7 +474,7 @@ const data__ = {
         {
             id: 26,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_6",
             isSelected: false,
             type: "hall",
             coordinates: [[392, 245], [508, 245], [508, 282], [392, 282]],
@@ -484,7 +484,7 @@ const data__ = {
         {
             id: 27,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_7",
             isSelected: false,
             type: "hall",
             coordinates: [[284, 245], [392, 245], [392, 282], [284, 282]],
@@ -494,7 +494,7 @@ const data__ = {
         {
             id: 28,
             uuid: "0000-0000-0000-0000-0000",
-            title: "Коридор",
+            title: "Коридор_8",
             isSelected: false,
             type: "hall",
             coordinates: [[214, 245], [284, 245], [284, 282], [214, 282]],
