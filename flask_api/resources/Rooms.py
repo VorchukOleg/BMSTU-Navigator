@@ -1,5 +1,6 @@
 from flask_api.resources.db_scripts.db_query import postgresql_select_RoomBasePoint, postgresql_select_AllBasePoints, postgresql_select_AllBasePointsConnections, postgresql_select_RoomCoordinates
 from flask_restful import Resource, reqparse
+from flask_api.common.util import is_int_convertible
 import networkx as nx
 from flask import Flask, request
 
@@ -12,6 +13,9 @@ class GetPath(Resource):
 
         initial_point = str(request.args.get('from'))
         finish_point = str(request.args.get('to'))
+
+        if (not is_int_convertible(initial_point) or  not is_int_convertible(finish_point)):
+            return "Bad request", 400
 
         self.cursor.execute(postgresql_select_RoomBasePoint, (initial_point,))
         initial_basepoint_record = self.cursor.fetchall()
@@ -81,3 +85,4 @@ class GetRoomCoordinates(Resource):
                 return coords
             else:
                 return "Record not found", 404
+            
