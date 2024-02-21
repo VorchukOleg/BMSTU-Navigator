@@ -39,8 +39,10 @@ class GetAllRoomsAndBasepointsByFloorID(Resource):
         rooms_record = self.cursor.fetchall()
         rooms_dict = room_tuple_to_dict(rooms_record)
 
-        return basenode_dict + rooms_dict
-    
+        return  {"basenode": basenode_dict,
+        "rooms": rooms_dict
+        }
+
 class GetAllRoomsAndBasepointsByBuildingIDAndFloorNumber(Resource):
     def __init__(self, **kwargs):
         self.cursor = kwargs['cursor']
@@ -64,6 +66,7 @@ class GetAllRoomsAndBasepointsByBuildingIDAndFloorNumber(Resource):
         rooms_record = self.cursor.fetchall()
         rooms_dict = room_tuple_to_dict(rooms_record)
 
-        return basenode_dict + rooms_dict        
+        return  {"basenode": basenode_dict,
+        "rooms": rooms_dict  }
            
         
