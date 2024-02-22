@@ -1,6 +1,7 @@
 import psycopg2
 import os
 from flask_restful import reqparse
+import uuid
 
 def get_db_connection():
     # # версия для работы в контейнере
@@ -13,7 +14,7 @@ def get_db_connection():
 
     # версия для работы вне контейнера (в случае, если проблемы с кодировкой при импорте переменных окружения)
     connection = psycopg2.connect(host = 'localhost',
-                            database = 'BMSTU_Navigator',
+                            database = 'BMSTU_Navigator_TEST',
                             user = 'postgres',
                             port = 5432,
                             password = 'postgres')
@@ -24,13 +25,14 @@ def get_db_connection():
 def get_parser():
     parser = reqparse.RequestParser()
     parser.add_argument('uuid')
-    parser.add_argument('floor_id')
+    parser.add_argument('floor_uuid')
     parser.add_argument('coordinates')
-    parser.add_argument('node_id')
+    parser.add_argument('node_uuid')
     parser.add_argument('weight')
     parser.add_argument('displayed_name')
     parser.add_argument('private_name')
     parser.add_argument('description')
+    parser.add_argument('floor_count')
     return parser
 
 def find_polygon_center(vertices):
@@ -59,4 +61,11 @@ def is_int_convertible(value):
         int(value)
         return True
     except (ValueError, TypeError):
+        return False
+
+def is_uuid(s):
+    try:
+        uuid_obj = uuid.UUID(s)
+        return True
+    except ValueError:
         return False

@@ -1,6 +1,6 @@
 from flask_api.resources.db_scripts.db_query import postgresql_select_RoomBasePoint, postgresql_select_AllBasePoints, postgresql_select_AllBasePointsConnections, postgresql_select_RoomCoordinates
 from flask_restful import Resource, reqparse
-from flask_api.common.util import is_int_convertible
+from flask_api.common.util import is_int_convertible, is_uuid
 import networkx as nx
 from flask import Flask, request
 
@@ -14,7 +14,7 @@ class GetPath(Resource):
         initial_point = str(request.args.get('from'))
         finish_point = str(request.args.get('to'))
 
-        if (not is_int_convertible(initial_point) or  not is_int_convertible(finish_point)):
+        if (not is_uuid(initial_point) or  not is_uuid(finish_point)):
             return "Bad request", 400
 
         self.cursor.execute(postgresql_select_RoomBasePoint, (initial_point,))
@@ -63,8 +63,8 @@ class GetRoomBasePoint(Resource):
 
     def get(self):
 
-            id = request.args.get('id')
-            self.cursor.execute(postgresql_select_RoomBasePoint, (id,))
+            uuid = request.args.get('uuid')
+            self.cursor.execute(postgresql_select_RoomBasePoint, (uuid,))
             basepoint_record = self.cursor.fetchall()
             if basepoint_record != []:
                 basepoint = basepoint_record[0][0]
@@ -77,8 +77,9 @@ class GetRoomCoordinates(Resource):
         self.cursor = kwargs['cursor']
 
     def get(self):
-            id = request.args.get('id')
-            self.cursor.execute(postgresql_select_RoomCoordinates, (id))
+            uuid = request.args.get('uuid')
+
+            self.cursor.execute(postgresql_select_RoomCoordinates, (uuid,))
             coords_record = self.cursor.fetchall()
             if coords_record != []:
                 coords = coords_record[0][0]

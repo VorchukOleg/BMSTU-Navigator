@@ -1,24 +1,24 @@
 
 #select queries
-postgresql_select_RoomBasePoint = """SELECT base_point_id FROM public.room WHERE room_id = %s """
-postgresql_select_AllCoords = """SELECT room_id, coordinates FROM room """
-postgresql_select_RoomCoordinates = """SELECT coordinates FROM public.room WHERE room_id = %s """
-postgresql_select_AllBasePoints = """SELECT * FROM public.base_point"""
-postgresql_select_AllBasePointsAtTheFloor = """SELECT * FROM public.base_point WHERE floor_id = %s """
-postgresql_select_AllRoomsAtTheFloor = """SELECT * FROM public.room WHERE floor_id = %s """
-postgresql_select_AllBasePointsAtTheFloorNoFloorID = """SELECT * FROM public.base_point"""
+postgresql_select_RoomBasePoint = """SELECT basepoint_uuid FROM public.room WHERE room_uuid = %s """
+postgresql_select_AllCoords = """SELECT room_uuid, coordinates FROM room """
+postgresql_select_RoomCoordinates = """SELECT coordinates FROM public.room WHERE room_uuid = %s """
+postgresql_select_AllBasePoints = """SELECT * FROM public.basepoint"""
+postgresql_select_AllBasePointsAtTheFloor = """SELECT * FROM public.basepoint WHERE floor_uuid = %s """
+postgresql_select_AllRoomsAtTheFloor = """SELECT * FROM public.room WHERE floor_uuid = %s """
+postgresql_select_AllBasePointsAtTheFloorNoFloorUuid = """SELECT * FROM public.basepoint"""
 postgresql_select_AllBuildings = """SELECT * FROM public.building """
-postgresql_select_FloorIDByBuildingIDAndFloorNumber = """SELECT floor_id FROM public.floor WHERE building_id = %s and floor_number = %s"""
-postgresql_select_AllBasePointsConnections = """SELECT base_point_1_id, base_point_2_id FROM public.base_connection """
-postgresql_select_BasePoint_by_ID = """SELECT * FROM public.base_point WHERE  base_point_id = %s """
-postgresql_select_only_coords_from_BasePoint_by_ID = """SELECT coordinates FROM public.base_point WHERE  base_point_id = %s """
-postgresql_select_Floors_by_Building_ID = """SELECT * FROM public.floor WHERE  building_id = %s """
-postgresql_select_BasePoint_Connections_by_BasePointID = """SELECT * FROM public.base_connection WHERE  base_point_1_id = %s """
+postgresql_select_FloorUuidByBuildingUuidAndFloorNumber = """SELECT floor_uuid FROM public.floor WHERE building_uuid = %s and floor_number = %s"""
+postgresql_select_AllBasePointsConnections = """SELECT basepoint_1_uuid, basepoint_2_uuid FROM public.base_connection """
+postgresql_select_BasePoint_by_Uuid = """SELECT * FROM public.basepoint WHERE  basepoint_uuid = %s """
+postgresql_select_only_coords_from_BasePoint_by_Uuid = """SELECT coordinates FROM public.basepoint WHERE  basepoint_uuid = %s """
+postgresql_select_Floors_by_Building_Uuid = """SELECT * FROM public.floor WHERE  building_uuid = %s """
+postgresql_select_BasePoint_Connections_by_BasePointUuid = """SELECT * FROM public.base_connection WHERE  basepoint_1_uuid = %s """
 
 #insert queries
-postgresql_insert_BasePoint_Connection = """INSERT INTO base_connection(weight, base_point_1_id, base_point_2_id)
+postgresql_insert_BasePoint_Connection = """INSERT INTO base_connection(weight, basepoint_1_uuid, basepoint_2_uuid)
                                                  VALUES (%s, %s, %s);"""
-postgresql_insert_BasePoint = """INSERT INTO base_point(uuid, floor_id, coordinates)
-                                                 VALUES (%s, %s, %s);"""
-postgresql_insert_Building = """INSERT INTO building(uuid, displayed_name, private_name, description)
+postgresql_insert_BasePoint = """INSERT INTO basepoint(floor_uuid, coordinates)
+                                                 VALUES (%s, %s);"""
+postgresql_insert_Building = """INSERT INTO building(displayed_name, private_name, description, floor_count)
                                                  VALUES (%s, %s, %s, %s);"""
