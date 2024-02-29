@@ -1,5 +1,7 @@
-from flask_api.resources.db_scripts.db_query import postgresql_select_RoomBasePoint, postgresql_select_AllBasePoints, postgresql_select_AllBasePointsConnections, postgresql_select_RoomCoordinates
+from flask_api.resources.db_scripts.db_query import postgresql_select_RoomBasePoint, postgresql_select_AllBasePoints,\
+    postgresql_select_AllBasePointsConnections, postgresql_select_RoomCoordinates, postgresql_select_AllRoomsInTheBuilding
 from flask_restful import Resource, reqparse
+from flask_api.models.Rooms_model import room_tuple_to_dict
 from flask_api.common.util import is_int_convertible, is_uuid
 import networkx as nx
 from flask import Flask, request
@@ -45,7 +47,7 @@ class GetPath(Resource):
 
             if all_basepointconnections_record != []:
                 for i in range(len(all_basepointconnections_record)):
-                    G.add_edge(all_basepointconnections_record[i][0], all_basepointconnections_record[i][1], weight=5)
+                    G.add_edge(all_basepointconnections_record[i][0], all_basepointconnections_record[i][1], weight=all_basepointconnections_record[i][2])
                 path = nx.shortest_path(G, initial_basepoint, finish_basepoint, weight='weight')
                 print("shortest parth = " + str(path))
                 length = nx.shortest_path_length(G, initial_basepoint, finish_basepoint, weight='weight')
@@ -71,6 +73,23 @@ class GetRoomBasePoint(Resource):
                 return basepoint
             else:
                 return "Record not found", 404
+
+class GetAllRoomsInTheBuilding(Resource):
+    def __init__(self, **kwargs):
+        self.cursor = kwargs['cursor']
+
+    def get(self):
+            uuid = request.args.get('uuid')
+            self.cursor.execute(postgresql_select_AllRoomsInTheBuilding, (uuid,))
+            room_record = self.cursor.fetchall()
+            if room_record != []:
+                rooms_dict = room_tuple_to_dict(room_record)
+                return {"rooms": rooms_dict }
+            else:
+                return "Record not found", 404
+
+
+
 
 class GetRoomCoordinates(Resource):
     def __init__(self, **kwargs):

@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 from .resources.BaseNodes import AddBasePoint, GetBaseNodeByUuid, GetAllBasePointsConnections, GetAllBasePointsAtTheFloor, AddBaseNodeConnection
 from .resources.Buildings import GetAllBuildings, AddBuilding
 from .resources.Floors import GetAllFloorsByBuildingUuid, GetAllRoomsAndBasepointsByFloorUuid, GetAllRoomsAndBasepointsByBuildingUuidAndFloorNumber
-from .resources.Rooms import GetPath, GetRoomBasePoint, GetRoomCoordinates
+from .resources.Rooms import GetPath, GetRoomBasePoint, GetRoomCoordinates, GetAllRoomsInTheBuilding
 from .resources.Misc import GetAllCoords
 from .common.util import get_db_connection, get_parser
 
@@ -58,6 +58,9 @@ api.add_resource(GetRoomBasePoint, '/get_room_basepoint', resource_class_kwargs=
 
 # Возвращает все существующие связи между базовыми точками
 api.add_resource(GetAllBasePointsConnections, '/get_all_baseconnections', resource_class_kwargs=kwargs_cursor)
+
+# Возвращает все помещения в здании
+api.add_resource(GetAllRoomsInTheBuilding, '/get_all_rooms_in_the_building', resource_class_kwargs=kwargs_cursor)
 
 # Возвращает путь между помещениями с uuid "from" и "to" в виде последовательности uuid базовых точек, по которым нужно пройти,
 # чтобы добраться до пункта назначения (путь состоит именно из uuid базовых точек,
