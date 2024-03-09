@@ -40,7 +40,7 @@ class GetPath(Resource):
 
         if all_basepoints_record != []:
             for i in range(len(all_basepoints_record)):
-                G.add_node(i)
+                G.add_node(all_basepoints_record[i][0], floor_uuid=all_basepoints_record[i][4])
 
             self.cursor.execute(postgresql_select_AllBasePointsConnections)
             all_basepointconnections_record = self.cursor.fetchall()
@@ -56,8 +56,8 @@ class GetPath(Resource):
                 return "BasePointsConnections records not found", 404
         else:
             return "BasePoints records not found", 404
-
-        return ({'from': initial_point, 'to': finish_point, 'path' : path, 'lenth': length })
+        path_with_floor_uuid = [{'floor_uuid': G.nodes[vertex]['floor_uuid'], 'basenode_uuid': vertex} for vertex in path]
+        return ({'from': initial_point, 'to': finish_point, 'path' : path_with_floor_uuid, 'lenth': length })
 
 class GetRoomBasePoint(Resource):
     def __init__(self, **kwargs):
