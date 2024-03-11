@@ -22,8 +22,11 @@ class GetPath(Resource):
         self.cursor.execute(postgresql_select_RoomBasePoint, (initial_point,))
         initial_basepoint_record = self.cursor.fetchall()
 
+        print("initial_basepoint_record", initial_basepoint_record)
+
         if initial_basepoint_record != []:
             initial_basepoint = initial_basepoint_record[0][0]
+            initial_basepoint_floor_uuid = initial_basepoint_record[0][1]
         else:
             return "Initial point record not found", 404
 
@@ -32,6 +35,7 @@ class GetPath(Resource):
 
         if finish_basepoint_record != []:
             finish_basepoint = finish_basepoint_record[0][0]
+            finish_basepoint_floor_uuid = finish_basepoint_record[0][1]
         else:
             return "Finish point record not found", 404
 
@@ -57,7 +61,9 @@ class GetPath(Resource):
         else:
             return "BasePoints records not found", 404
         path_with_floor_uuid = [{'floor_uuid': G.nodes[vertex]['floor_uuid'], 'basenode_uuid': vertex} for vertex in path]
-        return ({'from': initial_point, 'to': finish_point, 'path' : path_with_floor_uuid, 'lenth': length })
+        initial_with_floor_uuid = {'floor_uuid': initial_basepoint_floor_uuid, 'room_uuid': initial_point}
+        finish_point_with_floor_uuid = {'floor_uuid': finish_basepoint_floor_uuid, 'room_uuid': finish_point}
+        return ({'from': initial_with_floor_uuid, 'to': finish_point_with_floor_uuid, 'path' : path_with_floor_uuid, 'lenth': length })
 
 class GetRoomBasePoint(Resource):
     def __init__(self, **kwargs):
