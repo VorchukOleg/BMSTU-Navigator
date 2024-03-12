@@ -1,0 +1,72 @@
+.tooltip {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+}
+
+.first_floor_ulk {
+	height: 360px;
+	width: 900px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.first_floor_ulk svg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 849px;
+	width: 1200px;
+}
+
+.first_floor_ulk polygon {
+	fill: #ADD8E6;
+	stroke: #4682B4;
+	cursor: pointer;
+}
+
+.first_floor_ulk pngImage {
+	fill: #ADD8E6;
+}
+
+.first_floor_ulk background {
+	width: 900px;
+	height: 360px;
+}
+
+.isSelectedAud {
+	fill: rgb(21, 60, 117) !important;
+}
+
+.isSelectedHall {
+	fill: rgb(70, 130, 180) !important;
+}
+/*div {*/
+/*            background: purple;*/
+/*      border-radius: 50%;*/
+/*            width: 150px;*/
+/*            height: 150px;*/
+/*            text-align: center;*/
+/*      line-height: 140px;*/
+/*            color: white;*/
+/*      font-size: 25px;*/
+/*      font-family: sans-serif;*/
+/*      font-weight: bold;*/
+/*        }*/
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*}*/
+
+/*#tooltip {*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*svg {*/
+/*    border: 1px solid black;*/
+/*}*/
+
