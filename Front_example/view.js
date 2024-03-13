@@ -64,7 +64,7 @@ const data = {
             id: 27,
             uuid: "0000-0000-0000-0000-0000",
             title: "Коридор_7",
-            isSelected: true,
+            isSelected: false,
             type: "hall",
             coordinates: [[284, 245], [392, 245], [392, 282], [284, 282]],
             picture: null
