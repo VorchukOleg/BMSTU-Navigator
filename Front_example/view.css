@@ -1,22 +1,22 @@
-.tooltip {
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+/*.tooltip {*/
+/*  background-color: black;*/
+/*  color: #fff;*/
+/*  text-align: center;*/
+/*  padding: 5px 0;*/
+/*  border-radius: 6px;*/
 
-  /* Position the tooltip text - see examples below! */
-  position: absolute;
-}
+/*  !* Position the tooltip text - see examples below! *!*/
+/*  position: absolute;*/
+/*}*/
 
-.first_floor_ulk {
-	height: 360px;
-	width: 900px;
-	margin: 0 auto;
-	position: relative;
-}
+/*.polygons_view {*/
+/*	height: 360px;*/
+/*	width: 900px;*/
+/*	margin: 0 auto;*/
+/*	position: relative;*/
+/*}*/
 
-.first_floor_ulk svg {
+.polygons_view svg {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -24,19 +24,28 @@
 	width: 1200px;
 }
 
-.first_floor_ulk polygon {
-	fill: #ADD8E6;
+/*.polygons_view polygon {*/
+/*	fill: #ADD8E6;*/
+/*	stroke: #4682B4;*/
+/*	cursor: pointer;*/
+/*}*/
+
+/*.polygons_view pngImage {*/
+/*	fill: #ADD8E6;*/
+/*}*/
+
+
+.isHall {
+	/*fill: #caf0f8 !important;*/
+	/*stroke: #caf0f8;*/
+	fill: #e2eafc !important;
+	stroke: #c1d3fe;
+}
+
+.isAud {
+	fill: #ADD8E6 !important;
 	stroke: #4682B4;
 	cursor: pointer;
-}
-
-.first_floor_ulk pngImage {
-	fill: #ADD8E6;
-}
-
-.first_floor_ulk background {
-	width: 900px;
-	height: 360px;
 }
 
 .isSelectedAud {
@@ -44,29 +53,7 @@
 }
 
 .isSelectedHall {
-	fill: rgb(70, 130, 180) !important;
+	fill: #4682B4 !important;
 }
-/*div {*/
-/*            background: purple;*/
-/*      border-radius: 50%;*/
-/*            width: 150px;*/
-/*            height: 150px;*/
-/*            text-align: center;*/
-/*      line-height: 140px;*/
-/*            color: white;*/
-/*      font-size: 25px;*/
-/*      font-family: sans-serif;*/
-/*      font-weight: bold;*/
-/*        }*/
-/*body {*/
-/*    font-family: Arial, sans-serif;*/
-/*}*/
 
-/*#tooltip {*/
-/*    pointer-events: none;*/
-/*}*/
-
-/*svg {*/
-/*    border: 1px solid black;*/
-/*}*/
 
