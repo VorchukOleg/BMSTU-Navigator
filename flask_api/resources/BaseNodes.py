@@ -71,7 +71,7 @@ class AddBaseNodeConnection(Resource):
         basenode_uuid = str(basenode_uuid)
 
         node_to_connect_uuid = args['node_uuid']
-
+        floor_uuid = args['floor_uuid']
         #str_node_to_connect_uuid = str(node_to_connect_uuid)
         #weight = args['weight']
         
@@ -85,8 +85,8 @@ class AddBaseNodeConnection(Resource):
             print(node_to_connect_coordinates_record[0][0])
             node_to_connect_center_x, node_to_connect_center_y = find_polygon_center(node_to_connect_coordinates_record[0][0])
             weight = manhattan_distance(basenode_center_x, basenode_uuid_center_y, node_to_connect_center_x, node_to_connect_center_y)
-            self.cursor.execute(postgresql_insert_BasePoint_Connection, (weight, basenode_uuid, node_to_connect_uuid))
-            self.cursor.execute(postgresql_insert_BasePoint_Connection, (weight, node_to_connect_uuid, basenode_uuid))
+            self.cursor.execute(postgresql_insert_BasePoint_Connection, (weight, basenode_uuid, node_to_connect_uuid, floor_uuid,))
+            self.cursor.execute(postgresql_insert_BasePoint_Connection, (weight, node_to_connect_uuid, basenode_uuid, floor_uuid,))
         else:
             return [] #"Record not found", 404
 

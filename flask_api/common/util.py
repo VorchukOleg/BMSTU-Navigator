@@ -44,8 +44,8 @@ def find_polygon_center(vertices):
     
     # Суммирование значений координат
     for vertex in vertices.values():
-        sum_x += vertex['x']
-        sum_y += vertex['y']
+        sum_x += int(vertex['x'])
+        sum_y += int(vertex['y'])
     
     # Нахождение средних значений координат
     center_x = sum_x / num_vertices
