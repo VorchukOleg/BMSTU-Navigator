@@ -6,7 +6,8 @@ def basenode_tuple_to_dict(tuple):
         "displayed_name": tuple[i][1],
         "private_name": tuple[i][2],
         "coordinates": tuple[i][3],
-        "floor_uuid": tuple[i][4]
+        "floor_uuid": tuple[i][4],
+        "basenode_type": tuple[i][5]
         }
         array.append(base_point)
     return array
@@ -28,6 +29,7 @@ def basenode_with_connections_tuple_to_dict(basenode_tuple, connections_tuple):
         "private_name": basenode_tuple[0][2],
         "coordinates": basenode_tuple[0][3],
         "floor_uuid": basenode_tuple[0][4],
+        "basenode_type": tuple[i][5],
         "connections": connections
         }
     return result
