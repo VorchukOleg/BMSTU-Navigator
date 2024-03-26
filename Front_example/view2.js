@@ -8,32 +8,65 @@
 //           input.parentNode.insertBefore(label, input);
 //         });
 //       });
-function add(){
-  var newPointX = document.createElement('input');
-  // var newPointY = document.createElement('input');
-  // var label = document.createElement('label');
-  // label.setAttribute('text', 'text');
-  newPointX.setAttribute('type','text');
-  // newPointY.setAttribute('type','text');
-  newPointX.setAttribute('name','text');
-  // newPointY.setAttribute('name','text2');
-  newPointX.setAttribute('class','text');
-  // newPointY.setAttribute('class','text');
-  newPointX.setAttribute('size','50');
-  // newPointY.setAttribute('size','50');
-  newPointX.setAttribute('placeholder','Optional Field');
-  // newPointY.setAttribute('placeholder','Optional Field');
-  formfield.appendChild(newPointX);
-  // formfield.appendChild(newPointY);
-  // formfield.appendChild(label);
+
+function add() {
+    // Получаем контейнер, в который будут добавляться новые поля
+    var formContainer = document.querySelector('.left-column form');
+    event.preventDefault();
+
+    // Создаем новый div, который будет содержать новое поле ввода
+    var newInputContainer = document.createElement('div');
+    // var newPointX = document.createElement('input');
+    newInputContainer.className = 'formfield';
+
+    // Создаем новое поле ввода
+    var newInputX = document.createElement('input');
+    newInputX.type = 'text';
+    newInputX.name = 'text';
+    newInputX.classList.add('text');
+    newInputX.size = 50;
+    newInputX.placeholder = 'Optional Field';
+
+    // var newInputY = document.createElement('input');
+    // newInputY.type = 'text';
+    // newInputY.name = 'text';
+    // newInputY.classList.add('text');
+    // newInputY.size = 50;
+    // newInputY.placeholder = 'Optional Field';
+    // Добавляем новое поле ввода в div
+    newInputContainer.appendChild(newInputX);
+    // newInputContainer.appendChild(newInputY);
+
+    // Добавляем div с новым полем ввода в контейнер формы
+    formContainer.insertBefore(newInputContainer, formContainer.querySelector('.controls'));
 }
 
+// function add(){
+//     var newPointX = document.createElement('input');
+//     // var newPointY = document.createElement('input');
+//     // var label = document.createElement('label');
+//     // label.setAttribute('text', 'text');
+//     newPointX.setAttribute('type','text');
+//     // newPointY.setAttribute('type','text');
+//     newPointX.setAttribute('name','text');
+//     // newPointY.setAttribute('name','text2');
+//     newPointX.setAttribute('class','text');
+//     // newPointY.setAttribute('class','text');
+//     newPointX.setAttribute('size','50');
+//     // newPointY.setAttribute('size','50');
+//     newPointX.setAttribute('placeholder','Optional Field');
+//     // newPointY.setAttribute('placeholder','Optional Field');
+//     formfield.appendChild(newPointX);
+//     // formfield.appendChild(newPointY);
+//     // formfield.appendChild(label);
+// }
+
 function remove(){
-  var input_tags = formfield.getElementsByTagName('input');
-  if(input_tags.length > 2) {
-    formfield.removeChild(input_tags[(input_tags.length) - 1]);
-    // formfield.removeChild(input_tags[(input_tags.length) - 2]);
-  }
+    var input_tags = formfield.getElementsByTagName('input');
+    if(input_tags.length > 2) {
+        formfield.removeChild(input_tags[(input_tags.length) - 1]);
+        // formfield.removeChild(input_tags[(input_tags.length) - 2]);
+    }
 }
 
 function displayImage(inputElement) {

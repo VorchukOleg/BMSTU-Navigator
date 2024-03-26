@@ -44,13 +44,13 @@ label {
   color: #2691d9;
 }
 
-.first_floor_ulk {
-  display: flex;
-  align-items: flex-start;
-}
-.first_floor_ulk .background {
-  margin-left: 1500px;
-}
+/*.first_floor_ulk {*/
+/*  display: flex;*/
+/*  align-items: flex-start;*/
+/*}*/
+/*.first_floor_ulk .background {*/
+/*  margin-left: 1500px;*/
+/*}*/
 
 #pointsContainer {
     margin-top: 20px;
@@ -79,7 +79,7 @@ body {
 }
 
 .left-column {
-    width: 30%; /* Устанавливаем ширину столбцов */
+    width: 30%;
 }
 
 .right-column {
@@ -145,4 +145,9 @@ input[type="Submit"]:hover{
   background: #2691d9;
   color: #e9f4fb;
   transition: .5s;
+}
+
+.right-column {
+    float: right;
+    margin: 50px;
 }
