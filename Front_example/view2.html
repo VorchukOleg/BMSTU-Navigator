@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Fields</title>
+    <link rel="stylesheet" type="text/css" href="view2.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-column">
+      <form action="" method="POST">
+        <div class="formfield">
+          <label for="text">x:</label>
+          <input type="text" id="text" name="text" class="text" size="50" placeholder="Optional Field">
+        </div>
+<!--        <div class="formfield">-->
+<!--          <label for="text2">y:</label>-->
+<!--          <input type="text" id="text2" name="text2" class="text" size="50" placeholder="Optional Field">-->
+<!--        </div>-->
+        <input name="submit" type="Submit" value="Submit">
+        <input type="file" id="imageInput"  accept="image/*" onchange="displayImage(this)" class="background"/>
+        <div class="controls">
+          <button class="add" onclick="add()"><i class="fa fa-plus"></i>Add</button>
+          <button class="remove" onclick="remove()"><i class="fa fa-minus"></i>Remove</button>
+        </div>
+      </form>
+      </div>
+    <div class="right-column">
+      <img id="preview" src="" alt="" />
+<!--      <div id="coordinates" style="display: none;"></div>-->
+      <input type="text" id="coordinatesInput" placeholder="Input coordinares:" onchange="moveCursor(this.value)"/>
+      <img id="cursor" style="position:absolute; display: none;">
+    </div>
+    </div>
+    <script src="view2.js"></script>
+  </body>
+</html>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="ru">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Пример формы</title>-->
+<!--    <link rel="stylesheet" href="view2.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form>-->
+<!--        <div class="form-field">-->
+<!--            <label for="x">x:</label>-->
+<!--            <input type="text" id="x" name="x">-->
+<!--        </div>-->
+<!--        <div class="form-field">-->
+<!--            <label for="y">y:</label>-->
+<!--            <input type="text" id="y" name="y">-->
+<!--        </div>-->
+<!--    </form>-->
+<!--    <script src="view2.js"></script>-->
+<!--</body>-->
+<!--</html>-->
