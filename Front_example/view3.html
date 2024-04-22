@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Fields</title>
+    <link rel="stylesheet" type="text/css" href="view3.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+<!--      <form action="" method="POST">-->
+      <div class="left-column">
+    <div id="svg-container"></div>
+        <div class="image-container">
+        <img id="preview" src="" alt="" />
+<!--            <svg id="svg"></svg>-->
+<!--            <div id="tooltip" viewBox="0 0 100 100" style="display:none;position:absolute;background-color:black;color:white;padding:5px;border-radius:5px;">Tooltip</div>-->
+<!--        </div>-->
+    </div>
+
+      <div id="coordinates" style="display: none;"></div>
+      <input type="text" id="coordinatesInput" placeholder="Input coordinares:" onchange="moveCursor(this.value)"/>
+      <img id="cursor" style="position:absolute; display: none;">
+
+      </div>
+    <div class="right-column">
+      <input name="submit" type="Submit" value="Submit">
+        <input type="file" id="imageInput"  accept="image/*" onchange="displayImage(this)" class="background"/>
+          <div class="controls">
+            <button class="add" onclick="add()"><i class="fa fa-plus"></i>Add</button>
+            <button class="remove" onclick="remove()"><i class="fa fa-minus"></i>Remove</button>
+          </div>
+          <div class="controls">
+            <button id="draw-polygon" >Draw Polygon</button>
+            <button id="redraw-polygon">Redraw Polygon</button>
+        </div>
+        <div class="formfield">
+          <label for="x1">x1:</label>
+          <input type="text" id="x1" name="text" class="text" size="50" placeholder="Write coords">
+        </div>
+          <div class="formfield">
+            <label for="y1">y1:</label>
+          <input type="text" id="y1" name="text" class="text" size="50" placeholder="Write coords">
+        </div>
+<!--        <div class="formfield">-->
+<!--          <label for="text2">y:</label>-->
+<!--          <input type="text" id="text2" name="text2" class="text" size="50" placeholder="Optional Field">-->
+<!--        </div>-->
+
+    </div>
+<!--      </form>-->
+    </div>
+    <script src="view3.js"></script>
+  </body>
+</html>
+
+
+

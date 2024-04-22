@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.left-column {
+    width: 70%;
+}
+.right-column {
+    width: 30%;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.polygon-list {
+    margin-bottom: 20px;
+}
+
+.polygon-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.polygon-list li {
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.selected-polygon-coords {
+    margin-bottom: 20px;
+}
+
+/*#svgCanvas {*/
+/*    background-image: url('/1_floor_ulk.svg');*/
+/*    background-size: cover; !* или 'contain', в зависимости от того, как вы хотите, чтобы изображение масштабировалось *!*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center; !* или любое другое значение, чтобы контролировать позиционирование фона *!*/
+/*}*/
+
