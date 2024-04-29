@@ -5,12 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f65605eb-9097-47dc-a02e-3792a34047f7" name="Changes" comment="Commit - Upgrade for SB solve">
-      <change afterPath="$PROJECT_DIR$/front/1_floor_ulk_900х360.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/database.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/BMSTU-Navigator-API-Swagger-v2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/bmstu_navigator_backup_v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/common/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/common/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/models/BaseNodes_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/models/Buildings_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/models/Floors_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/models/Rooms_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/BaseNodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/Buildings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/Floors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/Misc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/Rooms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/db_scripts/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/resources/db_scripts/db_query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/migration from id to uuid backup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +68,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -61,7 +86,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "timurExample",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/joulejoestar/PycharmProjects/BMSTU-Navigator/front"
+    "last_opened_file_path": "/home/konstantin/PycharmProjects/BMSTU-Navigator"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -70,16 +95,21 @@
       <recent name="C:\Users\joulejoestar\PycharmProjects\BMSTU-Navigator\front" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pip install -r requirements.txt" />
+    </option>
+  </component>
   <component name="RunManager" selected="Python.sgUp">
     <configuration name="01.11.23" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="BMSTU-Navigator" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (Baum)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -95,6 +125,7 @@
     </configuration>
     <configuration name="sgUp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BMSTU-Navigator" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -116,13 +147,13 @@
     </configuration>
     <configuration name="tgExample" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BMSTU-Navigator" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.12 (BMSTU-Navigator)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -145,6 +176,13 @@
         <item itemvalue="Python.tgExample" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -178,5 +216,16 @@
     <MESSAGE value="Commit 2 - Fix" />
     <MESSAGE value="Commit - Upgrade for SB solve" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit - Upgrade for SB solve" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/BMSTU-Navigator-MaratBackend/flask_api/common/util.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
