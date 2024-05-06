@@ -15,9 +15,17 @@ class AddBuilding(Resource):
         description = args['description']
         floor_count = args['floor_count'] # исправлено вывод кол-ва этажей(почему-то второй раз выводилось описание)
 
-        self.cursor.execute(postgresql_insert_Building, (building_uuid, displayed_name, private_name, description, floor_count,))
+        try:
+            self.cursor.execute(postgresql_insert_Building,
+                                (building_uuid, displayed_name, private_name, description, floor_count,))
+            self.cursor.connection.commit()
 
-        return "Record was successfully added", 200
+            return {'message': 'Building successfully added'}, 201
+
+        except Exception as e:
+            print(e)
+            self.cursor.connection.rollback()  # Rollback on errors
+            return {'message': 'Internal server error'}, 500
 
 
 class GetAllBuildings(Resource):
@@ -25,11 +33,15 @@ class GetAllBuildings(Resource):
         self.cursor = kwargs['cursor']
 
     def get(self):
-        self.cursor.execute(postgresql_select_AllBuildings)
-        building_record = self.cursor.fetchall()
+        try:
+            self.cursor.execute(postgresql_select_AllBuildings)
+            building_record = self.cursor.fetchall()
 
-        print (building_record)
-        if building_record != []:
+            if not building_record:
+                return {'message': 'No buildings found'}, 404
+
             return building_tuple_to_dict(building_record)
-        else:
-            return "Record not found", 404
+
+        except Exception as e:
+            print(e)  # Log the error for debugging
+            return {'message': 'Internal server error'}, 500
