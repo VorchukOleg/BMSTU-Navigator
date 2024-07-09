@@ -1,0 +1,21 @@
+.button:before {
+  content:'add';
+}
+.button:hover:before {
+  content:'+';
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+  height: 100vh;
+  padding: 15px;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+
+}
+
+
