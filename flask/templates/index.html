@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Graph Builder</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Graph Builder</h1>
+
+        <!-- Окна выбора vertexpoints -->
+        <div class="select-container">
+            <label for="start-point">Выберите точку отправления:</label>
+            <select id="start-point">
+                <!-- Опции для выбора точек, получаемых с помощью JavaScript -->
+            </select>
+        </div>
+
+        <div class="select-container">
+            <label for="end-point">Выберите точку назначения:</label>
+            <select id="end-point">
+                <!-- Опции для выбора точек, получаемых с помощью JavaScript -->
+            </select>
+        </div>
+
+        <!-- Показ изображения графа -->
+        <img class="graph-image" src="{{ url_for('static', filename='graph.png') }}" alt="Graph Image">
+
+        <!-- Кнопка для отправки запроса -->
+        <div class="submit-btn-container">
+            <button id="submit-btn">Получить маршрут</button>
+        </div>
+
+        <!-- Показ маршрута и его длины -->
+        <div class="route-info">
+            <h3>Маршрут:</h3>
+            <ul id="route-list">
+                <!-- Варианты маршрутов будут добавлены с помощью JavaScript -->
+            </ul>
+
+            <h3>Длина маршрута:</h3>
+            <p id="route-length"></p>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+Index: 01.11.23.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import networkx as nx\r\nimport pandas as pd\r\nimport numpy as np\r\nimport matplotlib\r\nimport matplotlib.pyplot as plt\r\nmatplotlib.use('Qt5Agg')\r\n\r\nclass Node:\r\n    def __init__(self, _node_name, _x_cord, _y_cord, ):\r\n        self.graph_instance = nx.Graph()\r\n        self.node_name = _node_name;\r\n        self.x_cord = _x_cord\r\n        self.y_cord = _y_cord\r\n        self.graph_instance.add_node(_node_name, pos=(_x_cord, _y_cord))\r\n    def GetNode(self):\r\n        return self.graph_instance\r\n    def GetNodeName(self):\r\n        return self.node_name\r\n\r\nclass BaseNode:\r\n    def __init__(self, _base_node_name, _x_cord, _y_cord, ):\r\n        self.graph_instance = nx.Graph()\r\n        self.base_node_name = _base_node_name;\r\n        self.x_cord = _x_cord\r\n        self.y_cord = _y_cord\r\n        self.graph_instance.add_node( _base_node_name, pos = (_x_cord, _y_cord) )\r\n    def AddNode(self, _node_to_add ):\r\n        self.graph_instance = nx.compose_all([_node_to_add.GetNode(), self.graph_instance])\r\n        self.graph_instance.add_edge(_node_to_add.GetNodeName(), self.base_node_name, weight=5)\r\n\r\n    def GetGraph(self):\r\n        return self.graph_instance\r\n\r\n    def GetBaseNodeName(self):\r\n        return self.base_node_name\r\n\r\nclass Floor:\r\n    pass\r\n\r\n\r\n############################################### коридор 1\r\nbase_node_1 = BaseNode('коридор 1', 59.1, 96.6)\r\nnode_to_add = Node('104', 50.1, 109.5)\r\nbase_node_1.AddNode(node_to_add)\r\nnode_to_add = Node('106', 60.4, 110.4)\r\nbase_node_1.AddNode(node_to_add)\r\nnode_to_add = Node('WC 1', 68.8, 101.7)\r\nbase_node_1.AddNode(node_to_add)\r\nnode_to_add = Node('101', 51.2, 84.3)\r\nbase_node_1.AddNode(node_to_add)\r\n############################################### коридор 2\r\nbase_node_2 = BaseNode('коридор 2', 82.4, 91.5)\r\nnode_to_add = Node('лестница 1', 75.6, 101.7)\r\nbase_node_2.AddNode(node_to_add)\r\nnode_to_add = Node('лестница 2', 91.2, 102.8)\r\nbase_node_2.AddNode(node_to_add)\r\nnode_to_add = Node('лестница 3', 78.7, 78.8)\r\nbase_node_2.AddNode(node_to_add)\r\n############################################### коридор 3\r\nbase_node_3 = BaseNode('коридор 3', 116.9, 96.8)\r\nnode_to_add = Node('WC 2', 97.4, 101.0)\r\nbase_node_3.AddNode(node_to_add)\r\nnode_to_add = Node('028A', 107.9, 112.2)\r\nbase_node_3.AddNode(node_to_add)\r\nnode_to_add = Node('034A', 122.8, 112.2)\r\nbase_node_3.AddNode(node_to_add)\r\nnode_to_add = Node('062A', 135.8, 111.3)\r\nbase_node_3.AddNode(node_to_add)\r\n############################################### коридор 4\r\nbase_node_4 = BaseNode('коридор 4', 169.4, 96.2)\r\nnode_to_add = Node('WC 3', 196.2, 102.8)\r\nbase_node_4.AddNode(node_to_add)\r\n############################################### коридор 5\r\nbase_node_5 = BaseNode('коридор 5', 212.5, 91.1)\r\nnode_to_add = Node('лестница 4', 203.1, 102.1)\r\nbase_node_5.AddNode(node_to_add)\r\nnode_to_add = Node('лестница 5', 219.8, 103.2)\r\nbase_node_5.AddNode(node_to_add)\r\nnode_to_add = Node('117A', 202.4, 84.7)\r\nbase_node_5.AddNode(node_to_add)\r\n############################################### коридор 6\r\nbase_node_6 = BaseNode('коридор 6', 238.2, 95.7)\r\nnode_to_add = Node('WC 4', 225.5, 102.5)\r\nbase_node_6.AddNode(node_to_add)\r\n############################################### коридор 7\r\nbase_node_7 = BaseNode('коридор 7', 252.7, 106.7)\r\n############################################### коридор 8\r\nbase_node_8 = BaseNode('коридор 8', 265.0, 103.0)\r\nnode_to_add = Node('114', 270.7, 112.0)\r\nbase_node_8.AddNode(node_to_add)\r\nnode_to_add = Node('137', 258.9, 95.3)\r\nbase_node_8.AddNode(node_to_add)\r\nnode_to_add = Node('139', 272.3, 95.5)\r\nbase_node_8.AddNode(node_to_add)\r\n############################################### коридор 9\r\nbase_node_9 = BaseNode('коридор 9', 291.2, 100.1)\r\nnode_to_add = Node('141', 276.7, 95.1)\r\nbase_node_9.AddNode(node_to_add)\r\nnode_to_add = Node('145', 293.4, 94.4)\r\nbase_node_9.AddNode(node_to_add)\r\nnode_to_add = Node('147', 303.3, 95.7)\r\nbase_node_9.AddNode(node_to_add)\r\n\r\n############################################### коридор 3.1\r\nbase_node_31 = BaseNode('коридор 3.1', 133.8, 73.7)\r\nnode_to_add = Node('125', 129.0, 76.4)\r\nbase_node_31.AddNode(node_to_add)\r\nnode_to_add = Node('лестница 6', 134.3, 62.3)\r\nbase_node_31.AddNode(node_to_add)\r\n############################################### коридор 3.2\r\nbase_node_32 = BaseNode('коридор 3.2', 160.4, 77.3)\r\nnode_to_add = Node('121', 145.3, 79.7)\r\nbase_node_32.AddNode(node_to_add)\r\nnode_to_add = Node('107', 144.4, 72.4)\r\nbase_node_32.AddNode(node_to_add)\r\nnode_to_add = Node('111', 156.9, 71.8)\r\nbase_node_32.AddNode(node_to_add)\r\nnode_to_add = Node('113', 166.8, 74.8)\r\nbase_node_32.AddNode(node_to_add)\r\nnode_to_add = Node('109б', 171.0, 81.7)\r\nbase_node_32.AddNode(node_to_add)\r\nnode_to_add = Node('109', 180.0, 79.5)\r\nbase_node_32.AddNode(node_to_add)\r\n############################################### коридор 3.3\r\nbase_node_33 = BaseNode('коридор 3.3', 179.8, 70.2)\r\n############################################### коридор 3.4\r\nbase_node_34 = BaseNode('коридор 3.4', 194.5, 66.3)\r\nnode_to_add = Node('119', 204.2, 63.4)\r\nbase_node_34.AddNode(node_to_add)\r\n\r\n\r\nG1 = base_node_1.GetGraph()\r\nG2 = base_node_2.GetGraph()\r\nG3 = base_node_3.GetGraph()\r\nG4 = base_node_4.GetGraph()\r\nG5 = base_node_5.GetGraph()\r\nG6 = base_node_6.GetGraph()\r\nG7 = base_node_7.GetGraph()\r\nG8 = base_node_8.GetGraph()\r\nG9 = base_node_9.GetGraph()\r\n\r\n\r\nG = nx.compose_all([G1, G2, G3, G4, G5, G6, G7, G8, G9]) ## ЕДИНСТВЕННАЯ ПОЛЕЗНАЯ СТРОЧКА. ОБЪЕДИНЕНИЕ ГРАФОВ ВОЕДИНО\r\nG.add_edge(base_node_1.GetBaseNodeName(),base_node_2.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_2.GetBaseNodeName(),base_node_3.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_3.GetBaseNodeName(),base_node_4.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_4.GetBaseNodeName(),base_node_5.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_5.GetBaseNodeName(),base_node_6.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_6.GetBaseNodeName(),base_node_7.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_7.GetBaseNodeName(),base_node_8.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_8.GetBaseNodeName(),base_node_9.GetBaseNodeName(),weight=5)\r\n\r\nG31 = base_node_31.GetGraph()\r\nG32 = base_node_32.GetGraph()\r\nG33 = base_node_33.GetGraph()\r\nG34 = base_node_34.GetGraph()\r\n\r\nG = nx.compose_all([G, G31, G32, G33, G34])\r\n\r\nG.add_edge(base_node_3.GetBaseNodeName(),base_node_31.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_31.GetBaseNodeName(),base_node_32.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_32.GetBaseNodeName(),base_node_33.GetBaseNodeName(),weight=5)\r\nG.add_edge(base_node_33.GetBaseNodeName(),base_node_34.GetBaseNodeName(),weight=5)\r\n\r\ninitial_point = input('enter initial point')\r\nfinish_point = input('enter finish point')\r\n\r\npath = nx.shortest_path(G, initial_point, finish_point, weight='weight')\r\nprint(\"shortest parth = \" + str(path))\r\nlength = nx.shortest_path_length(G, initial_point, finish_point, weight='weight')\r\nprint(\"lenth of the shortest parth = \" + str(length))\r\n\r\nnodePos = nx.get_node_attributes(G, 'pos')\r\ndatafile = 'ULK.jpeg'\r\n#datafile = 'FirstFloorPlan.png'\r\nimg = plt.imread(datafile)\r\n\r\nplt.imshow(img, zorder=0, extent=[0.0, 327.0, 0.0, 135.0])\r\nnx.draw(G, pos = nodePos, with_labels=True)\r\nplt.show()\r\n
+===================================================================
+diff --git a/01.11.23.py b/01.11.23.py
+--- a/01.11.23.py	
++++ b/01.11.23.py	
+@@ -3,8 +3,10 @@
+ import numpy as np
+ import matplotlib
+ import matplotlib.pyplot as plt
++
+ matplotlib.use('Qt5Agg')
+ 
++
+ class Node:
+     def __init__(self, _node_name, _x_cord, _y_cord, ):
+         self.graph_instance = nx.Graph()
+@@ -12,19 +14,23 @@
+         self.x_cord = _x_cord
+         self.y_cord = _y_cord
+         self.graph_instance.add_node(_node_name, pos=(_x_cord, _y_cord))
++
+     def GetNode(self):
+         return self.graph_instance
++
+     def GetNodeName(self):
+         return self.node_name
+ 
++
+ class BaseNode:
+     def __init__(self, _base_node_name, _x_cord, _y_cord, ):
+         self.graph_instance = nx.Graph()
+         self.base_node_name = _base_node_name;
+         self.x_cord = _x_cord
+         self.y_cord = _y_cord
+-        self.graph_instance.add_node( _base_node_name, pos = (_x_cord, _y_cord) )
+-    def AddNode(self, _node_to_add ):
++        self.graph_instance.add_node(_base_node_name, pos=(_x_cord, _y_cord))
++
++    def AddNode(self, _node_to_add):
+         self.graph_instance = nx.compose_all([_node_to_add.GetNode(), self.graph_instance])
+         self.graph_instance.add_edge(_node_to_add.GetNodeName(), self.base_node_name, weight=5)
+ 
+@@ -34,6 +40,7 @@
+     def GetBaseNodeName(self):
+         return self.base_node_name
+ 
++
+ class Floor:
+     pass
+ 
+@@ -128,7 +135,6 @@
+ node_to_add = Node('119', 204.2, 63.4)
+ base_node_34.AddNode(node_to_add)
+ 
+-
+ G1 = base_node_1.GetGraph()
+ G2 = base_node_2.GetGraph()
+ G3 = base_node_3.GetGraph()
+@@ -139,16 +145,15 @@
+ G8 = base_node_8.GetGraph()
+ G9 = base_node_9.GetGraph()
+ 
+-
+-G = nx.compose_all([G1, G2, G3, G4, G5, G6, G7, G8, G9]) ## ЕДИНСТВЕННАЯ ПОЛЕЗНАЯ СТРОЧКА. ОБЪЕДИНЕНИЕ ГРАФОВ ВОЕДИНО
+-G.add_edge(base_node_1.GetBaseNodeName(),base_node_2.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_2.GetBaseNodeName(),base_node_3.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_3.GetBaseNodeName(),base_node_4.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_4.GetBaseNodeName(),base_node_5.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_5.GetBaseNodeName(),base_node_6.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_6.GetBaseNodeName(),base_node_7.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_7.GetBaseNodeName(),base_node_8.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_8.GetBaseNodeName(),base_node_9.GetBaseNodeName(),weight=5)
++G = nx.compose_all([G1, G2, G3, G4, G5, G6, G7, G8, G9])  ## ЕДИНСТВЕННАЯ ПОЛЕЗНАЯ СТРОЧКА. ОБЪЕДИНЕНИЕ ГРАФОВ ВОЕДИНО
++G.add_edge(base_node_1.GetBaseNodeName(), base_node_2.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_2.GetBaseNodeName(), base_node_3.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_3.GetBaseNodeName(), base_node_4.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_4.GetBaseNodeName(), base_node_5.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_5.GetBaseNodeName(), base_node_6.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_6.GetBaseNodeName(), base_node_7.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_7.GetBaseNodeName(), base_node_8.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_8.GetBaseNodeName(), base_node_9.GetBaseNodeName(), weight=5)
+ 
+ G31 = base_node_31.GetGraph()
+ G32 = base_node_32.GetGraph()
+@@ -157,10 +162,10 @@
+ 
+ G = nx.compose_all([G, G31, G32, G33, G34])
+ 
+-G.add_edge(base_node_3.GetBaseNodeName(),base_node_31.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_31.GetBaseNodeName(),base_node_32.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_32.GetBaseNodeName(),base_node_33.GetBaseNodeName(),weight=5)
+-G.add_edge(base_node_33.GetBaseNodeName(),base_node_34.GetBaseNodeName(),weight=5)
++G.add_edge(base_node_3.GetBaseNodeName(), base_node_31.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_31.GetBaseNodeName(), base_node_32.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_32.GetBaseNodeName(), base_node_33.GetBaseNodeName(), weight=5)
++G.add_edge(base_node_33.GetBaseNodeName(), base_node_34.GetBaseNodeName(), weight=5)
+ 
+ initial_point = input('enter initial point')
+ finish_point = input('enter finish point')
+@@ -172,9 +177,9 @@
+ 
+ nodePos = nx.get_node_attributes(G, 'pos')
+ datafile = 'ULK.jpeg'
+-#datafile = 'FirstFloorPlan.png'
++# datafile = 'FirstFloorPlan.png'
+ img = plt.imread(datafile)
+ 
+ plt.imshow(img, zorder=0, extent=[0.0, 327.0, 0.0, 135.0])
+-nx.draw(G, pos = nodePos, with_labels=True)
++nx.draw(G, pos=nodePos, with_labels=True)
+ plt.show()
+Index: .idea/BMSTU-Navigator.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"PYTHON_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\" />\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/.idea/BMSTU-Navigator.iml b/.idea/BMSTU-Navigator.iml
+--- a/.idea/BMSTU-Navigator.iml	
++++ b/.idea/BMSTU-Navigator.iml	
+@@ -1,8 +1,10 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module type="PYTHON_MODULE" version="4">
+   <component name="NewModuleRootManager">
+-    <content url="file://$MODULE_DIR$" />
+-    <orderEntry type="inheritedJdk" />
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.12 (BMSTU-Navigator)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.9 (DeepLearning) (2)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (DeepLearning) (2)" project-jdk-type="Python SDK" />
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (BMSTU-Navigator)" />
++  </component>
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (BMSTU-Navigator)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
